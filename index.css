@@ -1,3 +1,14 @@
-head {background-color:#000000}
-p {color:#FFFFFF}
-h1 {color:#00FF00}
+body 
+{
+  background-color:black;
+}
+
+p 
+{
+  color:white;
+}
+
+h1 
+{
+  color:#00FF00;
+}
