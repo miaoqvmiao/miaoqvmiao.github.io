@@ -1,1 +1,4 @@
-command(html5)
+command(html 5)
+head {
+    word-wrap:true;
+}
