@@ -1,1 +1,2 @@
-psml index.psml -quiet -o
+all:
+    psml index.psml -quiet -o
