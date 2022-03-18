@@ -1,4 +1,4 @@
 command(html 5)
 head {
-    word-wrap:true;
+    background-color:rgb(255,255,255);
 }
