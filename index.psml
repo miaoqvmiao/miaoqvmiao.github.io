@@ -1,4 +1,0 @@
-command(html 5)
-head {
-    background-color:rgb(255,255,255);
-}
