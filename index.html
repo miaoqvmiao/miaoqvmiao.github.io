@@ -7,6 +7,16 @@
     <meta http-equiv="Page-Enter" content="revealTrans(duration=5,transtion=10)" />
     <meta http-equiv="Page-Exit" contect="revealTrans(duration=5,transtion=10)" />
     <title>miaoqvmiao</title>
+
+    <script>
+      function close(){
+        if(confirm("Are you sure you want to leave this page?")){
+          window.opener=null;
+          window.open('','_self');
+          window.close();
+        }
+      }
+    </script>
   </head>
   <body>
     <a href="http://github.com/miaoqvmiao/">
@@ -18,5 +28,6 @@
     <br>
     <p>Hello,I'm <strong>Miaoqvmiao(喵去喵)</strong></p>
     <br>
+    <button onclick="close()"><img scr="https://shields.io/badge/Close-%20-red"></img></button>
     </body>
 </html>
