@@ -14,6 +14,8 @@
     <script>
       function pageclose(){
         if(confirm("Are you sure you want to leave this page?")==true){
+          window.opener=null;
+          window.open('','_self');
           window.close();
         }
       }
