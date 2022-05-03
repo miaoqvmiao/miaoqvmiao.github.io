@@ -3,6 +3,12 @@ body
   background-color:black;
 }
 
+header
+{
+  background-color:white;
+  color:white;
+}
+
 p 
 {
   color:white;
