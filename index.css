@@ -24,6 +24,15 @@ a.nounderline
   text-decoration: none;
 }
 
+@font-face
+{
+  font-family: 'number_font';
+  src: url('FiraCode-Bold.ttf'); 
+}
+　
+
+
+
 .div1
 {
   height:3px;
