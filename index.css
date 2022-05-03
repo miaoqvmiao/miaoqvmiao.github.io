@@ -1,3 +1,9 @@
+@font-face
+{
+  font-family: 'FiraCode';
+  src: url('FiraCode-Bold.ttf'); 
+}
+
 body 
 {
   background-color:black;
@@ -12,26 +18,19 @@ header
 p 
 {
   color:white;
+  font-family:"FiraCode"
 }
 
 h1.a
 {
   color:black;
+  font-family:"FiraCode"
 }
 
 a.nounderline
 {
   text-decoration: none;
 }
-
-@font-face
-{
-  font-family: 'number_font';
-  src: url('FiraCode-Bold.ttf'); 
-}
-　
-
-
 
 .div1
 {
