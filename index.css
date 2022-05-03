@@ -3,22 +3,17 @@ body
   background-color:black;
 }
 
-center
-{
-  background-color:white;
-}
-
 p 
 {
   color:white;
 }
 
-.a h1 
+h1.a
 {
   color:black;
 }
 
-.nounderline a
+a.nounderline
 {
   text-decoration: none;
 }
