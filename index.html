@@ -1,6 +1,7 @@
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href='index.css' />
+
     <meta name="keywords" content="Miaoqvmiao,miaoqvmiao,喵去喵,MIAOQVMIAO,喵去喵mqm,喵去喵MQM" />
     <meta name="description" content="Miaoqvmiao's website." />
     <meta name="author" content="Miaoqvmiao" />
@@ -12,27 +13,9 @@
     <title>miaoqvmiao</title>
   </head>
   <body>
-    <script>
-      function pageclose(){
-        if(confirm("Are you sure you want to leave this page?")==1){
-          if (navigator.userAgent.indexOf("MSIE") > 0){
-            if (navigator.userAgent.indexOf("MSIE 6.0") > 0){
-              window.opener = null;
-              window.close();
-            }else {
-               window.open('', '_top');
-               window.top.close();
-            }
-          }else if (navigator.userAgent.indexOf("Firefox") > 0) {
-             window.location.href = 'about:blank';
-          }else {
-             window.opener = null;
-             window.open('', '_self', '');
-             window.close();
-          }
-        }
-      }
-    </script>
+
+    <script></script>
+
     <header>
       <a href="http://github.com/miaoqvmiao/" class="nounderline">
         <center><h1 class="a">Miaoqvmiao</h1></center>
@@ -44,6 +27,6 @@
     <br>
     <p>Hello,I'm <strong>Miaoqvmiao(喵去喵)</strong></p>
     <br>
-    <button onclick="pageclose()"><img src="https://shields.io/badge/Close-%20-red"></img></button>
+    <a href="javascript:window.close()"><img src="https://shields.io/badge/Close-%20-white"></img></a>
     </body>
 </html>
