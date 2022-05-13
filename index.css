@@ -11,9 +11,8 @@ body
 
 header
 {
-  border-width:6px;
-  border-color:white;
-  border-sadius:5px;
+  border:5px solid white;
+  border-sadius:3px;
   background-color:white;
   color:white;
 }
