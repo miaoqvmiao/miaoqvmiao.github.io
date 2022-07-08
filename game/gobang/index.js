@@ -42,7 +42,7 @@ function setup(){
      line(2,(h/14)*i,w,(h/14)*i)
   }
   fill(0,0,0)
-  ellipse(320,320,7,7)
+  ellipse((w+1)/2,(h+1)/2,7,7)
   wth = w + 1
   ht = h + 1
   textSize(ts)
