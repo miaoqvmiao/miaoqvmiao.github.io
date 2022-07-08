@@ -74,7 +74,7 @@ onmousedown = function(){
         }
         console.log(chessboard)
         /*Who is winner*/
-				fill(255,0,0)
+	fill(255,0,0)
         var nIsBlack = isBlack
         for (let j of [0]){
           var num = 1
