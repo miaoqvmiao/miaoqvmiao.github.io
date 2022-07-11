@@ -14,7 +14,7 @@ var isBlack = 1,
     ts = 50,
     tf,
     ua = navigator.userAgent,
-		winCM = []
+    winCM = []
 
 function setup(){
   if (ua.indexOf('Android') == -1){
