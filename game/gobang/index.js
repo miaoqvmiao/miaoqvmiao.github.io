@@ -75,9 +75,7 @@ onmousedown = function(){
         }
         console.log(chessboard)
         /*Who is winner*/
-	      fill(255,0,0)
         var nIsBlack = isBlack
-				strokeWeight(3)
         for (let j of [0]){
           var num = 1
           for (let i = 1;i <= 4;i++){
@@ -107,6 +105,8 @@ onmousedown = function(){
             }
           }
           if (num >= 5){
+            fill(255,0,0)
+            strokeWeight(3)
 	          for (let i;i < winCM.length;i++){line(winCM[i][0],winCM[i][1],winCM[i+1][0],winCM[i+1][1])}
             text(colorr[chessboard[chessmanY][chessmanX]-1] + " WIN！",wth/2,ht/2)
             console.log(colorr[chessboard[chessmanY][chessmanX]-1] + " WIN！")
@@ -142,6 +142,8 @@ onmousedown = function(){
             }
           }
           if (num >= 5){
+            fill(255,0,0)
+            strokeWeight(3)
 						for (let i;i < winCM.length;i++){line(winCM[i][0],winCM[i][1],winCM[i+1][0],winCM[i+1][1])}
             text(colorr[chessboard[chessmanY][chessmanX]-1] + " WIN！",wth/2,ht/2)
             console.log(colorr[chessboard[chessmanY][chessmanX]-1] + " WIN！")
@@ -177,6 +179,8 @@ onmousedown = function(){
             }
           }
           if (num >= 5){
+            fill(255,0,0)
+            strokeWeight(3)
 						for (let i;i < winCM.length;i++){line(winCM[i][0],winCM[i][1],winCM[i+1][0],winCM[i+1][1])}
             text(colorr[chessboard[chessmanY][chessmanX]-1] + " WIN！",wth/2,ht/2)
             console.log(colorr[chessboard[chessmanY][chessmanX]-1] + " WIN！")
@@ -212,6 +216,8 @@ onmousedown = function(){
             }
           }
           if (num >= 5){
+            fill(255,0,0)
+            strokeWeight(3)
 						for (let i;i < winCM.length;i++){line(winCM[i][0],winCM[i][1],winCM[i+1][0],winCM[i+1][1])}
             text(colorr[chessboard[chessmanY][chessmanX]-1] + " WIN！",wth/2,ht/2)
             console.log(colorr[chessboard[chessmanY][chessmanX]-1] + " WIN！")
