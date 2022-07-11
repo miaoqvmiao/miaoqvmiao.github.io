@@ -83,7 +83,7 @@ onmousedown = function(){
             try{
               if (chessboard[chessmanY + i][chessmanX + i] === chessboard[chessmanY][chessmanX]){
                 num++
-								winCM.push([(chessmanX + i) * (wth / 14),(chessmanY + i) * (ht / 14)])
+		winCM.push([(chessmanX + i) * (wth / 14),(chessmanY + i) * (ht / 14)])
               }else{
                 break
               }
@@ -96,7 +96,7 @@ onmousedown = function(){
             try{
               if (chessboard[chessmanY - i][chessmanX - i] === chessboard[chessmanY][chessmanX]){
                 num++
-								winCM.push([(chessmanX + i) * (wth / 14),(chessmanY + i) * (ht / 14)])
+		winCM.push([(chessmanX + i) * (wth / 14),(chessmanY + i) * (ht / 14)])
               }else{
                 break
               }
@@ -106,7 +106,7 @@ onmousedown = function(){
             }
           }
           if (num >= 5){
-						for (let i;i < winCM.length;i++){line(winCM[i][0],winCM[i][1],winCM[i+1][0],winCM[i+1][1])}
+	    for (let i;i < winCM.length;i++){line(winCM[i][0],winCM[i][1],winCM[i+1][0],winCM[i+1][1])}
             text(colorr[chessboard[chessmanY][chessmanX]-1] + " WIN！",wth/2,ht/2)
             console.log(colorr[chessboard[chessmanY][chessmanX]-1] + " WIN！")
             isend = 1
@@ -118,7 +118,7 @@ onmousedown = function(){
             try{
               if (chessboard[chessmanY - i][chessmanX + i] === chessboard[chessmanY][chessmanX]){
                 num++
-								winCM.push([(chessmanX + i) * (wth / 14),(chessmanY + i) * (ht / 14)])
+				winCM.push([(chessmanX + i) * (wth / 14),(chessmanY + i) * (ht / 14)])
               }else{
                 break
               }
@@ -131,7 +131,7 @@ onmousedown = function(){
             try{
               if (chessboard[chessmanY + i][chessmanX - i] === chessboard[chessmanY][chessmanX]){
                 num++
-								winCM.push([(chessmanX + i) * (wth / 14),(chessmanY + i) * (ht / 14)])
+				winCM.push([(chessmanX + i) * (wth / 14),(chessmanY + i) * (ht / 14)])
               }else{
                 break
               }
@@ -141,7 +141,7 @@ onmousedown = function(){
             }
           }
           if (num >= 5){
-						for (let i;i < winCM.length;i++){line(winCM[i][0],winCM[i][1],winCM[i+1][0],winCM[i+1][1])}
+			for (let i;i < winCM.length;i++){line(winCM[i][0],winCM[i][1],winCM[i+1][0],winCM[i+1][1])}
             text(colorr[chessboard[chessmanY][chessmanX]-1] + " WIN！",wth/2,ht/2)
             console.log(colorr[chessboard[chessmanY][chessmanX]-1] + " WIN！")
             isend = 1
@@ -153,7 +153,7 @@ onmousedown = function(){
             try{
               if (chessboard[chessmanY][chessmanX + i] === chessboard[chessmanY][chessmanX]){
                 num++
-								winCM.push([(chessmanX + i) * (wth / 14),(chessmanY + i) * (ht / 14)])
+				winCM.push([(chessmanX + i) * (wth / 14),(chessmanY + i) * (ht / 14)])
               }else{
                 break
               }
@@ -166,7 +166,7 @@ onmousedown = function(){
             try{
               if (chessboard[chessmanY][chessmanX - i] === chessboard[chessmanY][chessmanX]){
                 num++
-								winCM.push([(chessmanX + i) * (wth / 14),(chessmanY + i) * (ht / 14)])
+				winCM.push([(chessmanX + i) * (wth / 14),(chessmanY + i) * (ht / 14)])
               }else{
                 break
               }
@@ -176,7 +176,7 @@ onmousedown = function(){
             }
           }
           if (num >= 5){
-						for (let i;i < winCM.length;i++){line(winCM[i][0],winCM[i][1],winCM[i+1][0],winCM[i+1][1])}
+			for (let i;i < winCM.length;i++){line(winCM[i][0],winCM[i][1],winCM[i+1][0],winCM[i+1][1])}
             text(colorr[chessboard[chessmanY][chessmanX]-1] + " WIN！",wth/2,ht/2)
             console.log(colorr[chessboard[chessmanY][chessmanX]-1] + " WIN！")
             isend = 1
@@ -188,7 +188,7 @@ onmousedown = function(){
             try{
               if (chessboard[chessmanY - i][chessmanX] === chessboard[chessmanY][chessmanX]){
                 num++
-								winCM.push([(chessmanX + i) * (wth / 14),(chessmanY + i) * (ht / 14)])
+				winCM.push([(chessmanX + i) * (wth / 14),(chessmanY + i) * (ht / 14)])
               }else{
                 break
               }
@@ -201,7 +201,7 @@ onmousedown = function(){
             try{
               if (chessboard[chessmanY + i][chessmanX] === chessboard[chessmanY][chessmanX]){
                 num++
-								winCM.push([(chessmanX + i) * (wth / 14),(chessmanY + i) * (ht / 14)])
+				winCM.push([(chessmanX + i) * (wth / 14),(chessmanY + i) * (ht / 14)])
               }else{
                 break
               }
@@ -211,7 +211,7 @@ onmousedown = function(){
             }
           }
           if (num >= 5){
-						for (let i;i < winCM.length;i++){line(winCM[i][0],winCM[i][1],winCM[i+1][0],winCM[i+1][1])}
+			for (let i;i < winCM.length;i++){line(winCM[i][0],winCM[i][1],winCM[i+1][0],winCM[i+1][1])}
             text(colorr[chessboard[chessmanY][chessmanX]-1] + " WIN！",wth/2,ht/2)
             console.log(colorr[chessboard[chessmanY][chessmanX]-1] + " WIN！")
             isend = 1
