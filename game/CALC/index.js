@@ -19,7 +19,7 @@ function setup(){
     sx = height /2
     sy = width - 50
     h = height
-    SPlane = loadImage('./res/plane')
+    SPlane = loadImage('./res/plane.png')
 }
 
 function draw(){
