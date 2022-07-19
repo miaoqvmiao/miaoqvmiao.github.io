@@ -4,7 +4,11 @@ var wt = window.innerWidth || document.documentElement.clientWidth || document.b
     q2,
     max = 100,
     min = -100,
-    speed = 2
+    speed = 2,
+    SPlane,
+    sx,
+    sy,
+    h
 
 function setup(){
     if (navigator.userAgent.indexOf('Android') == -1 || navigator.userAgent.indexOf('iPhone') == -1){
@@ -12,6 +16,10 @@ function setup(){
     }else{
       createCanvas(wt,wt)
     }
+    sx = height /2
+    sy = width - 50
+    h = height
+    SPlane = loadImage('./res/plane')
 }
 
 function draw(){
@@ -26,8 +34,6 @@ function randQ(){
 }
 
 function move(){
-    var a = document.getElementsByClassName("answer")
-    for (let i of a){
-        i.style.top = String(parseInt(i.style.top)+speed) + 'px'
-    }
+    if (mouseX > h){sx = h}
+    image(SPlane,sx,sy)
 }
