@@ -5,11 +5,11 @@ var wt = window.innerWidth || document.documentElement.clientWidth || document.b
     max = 100,
     min = -100,
     speed = 2,
-    SPlane = loadImage('./res/plane.png'),
+    SPlane,
     sx,
     sy,
     h,
-    place = loadImage('./res/place.jpg')
+    place
 
 function setup(){
     if (navigator.userAgent.indexOf('Android') == -1 || navigator.userAgent.indexOf('iPhone') == -1){
@@ -21,6 +21,8 @@ function setup(){
     sx = height /2
     sy = width - 100
     h = height
+    SPlane = loadImage('./res/plane.png')
+    place = loadImage('./res/place.jpg')
 }
 
 function draw(){
