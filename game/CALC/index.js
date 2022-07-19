@@ -17,7 +17,7 @@ function setup(){
       createCanvas(wt,wt)
     }
     sx = height /2
-    sy = width - 50
+    sy = width - 100
     h = height
     SPlane = loadImage('./res/plane.png')
 }
@@ -34,6 +34,8 @@ function randQ(){
 }
 
 function move(){
-    if (mouseX > h){sx = h}
+    if (mouseX > h){
+        sx = h - 30
+    }
     image(SPlane,sx,sy)
 }
