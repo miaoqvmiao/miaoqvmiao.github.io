@@ -20,10 +20,10 @@ function setup(){
     sy = width - 100
     h = height
     SPlane = loadImage('./res/plane.png')
-    background(0)
 }
 
 function draw(){
+    background(0)
     move()
 }
 
@@ -34,6 +34,7 @@ function randQ(){
 }
 
 function move(){
+    sx = mouseX
     if (mouseX > h){
         sx = h - 30
     }
