@@ -16,6 +16,7 @@ function setup(){
 
 function draw(){
     background(0)
+    move()
 }
 
 function randQ(){
