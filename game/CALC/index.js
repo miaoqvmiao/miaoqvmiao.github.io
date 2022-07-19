@@ -27,7 +27,7 @@ function randQ(){
 
 function move(){
     var a = document.getElementsByClassName("answer")
-    for (let i in a){
-        a[i].style.top = String(parseInt(a[i].style.top)+speed) + 'px'
+    for (let i of a){
+        i.style.top = String(parseInt(i.style.top)+speed) + 'px'
     }
 }
