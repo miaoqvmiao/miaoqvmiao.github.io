@@ -5,10 +5,11 @@ var wt = window.innerWidth || document.documentElement.clientWidth || document.b
     max = 100,
     min = -100,
     speed = 2,
-    SPlane,
+    SPlane = loadImage('./res/plane.png'),
     sx,
     sy,
-    h
+    h,
+    place = loadImage('./res/place.jpg')
 
 function setup(){
     if (navigator.userAgent.indexOf('Android') == -1 || navigator.userAgent.indexOf('iPhone') == -1){
@@ -16,14 +17,14 @@ function setup(){
     }else{
       createCanvas(wt,wt)
     }
+    background
     sx = height /2
     sy = width - 100
     h = height
-    SPlane = loadImage('./res/plane.png')
 }
 
 function draw(){
-    background(0)
+    image(place,h/2,h/2)
     move()
 }
 
