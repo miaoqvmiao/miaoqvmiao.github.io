@@ -27,7 +27,7 @@ function setup(){
 
 function draw(){
     background(0)
-    image(place,0,0,place.width*(h/place.height),h+100)
+    image(place,0,0,place.width*((h+200)/place.height),h+200)
     move()
 }
 
