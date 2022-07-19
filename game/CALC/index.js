@@ -26,7 +26,7 @@ function setup(){
 }
 
 function draw(){
-    image(place,0,0,h,)
+    image(place,0,0,place.width*(h/place.height),h)
     move()
 }
 
