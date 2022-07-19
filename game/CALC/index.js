@@ -35,8 +35,11 @@ function randQ(){
 
 function move(){
     sx = mouseX
-    if (mouseX > h){
+    if (mouseX > (h - 30)){
         sx = h - 30
+    }
+    if (mouseX < 30){
+        sx = 30
     }
     image(SPlane,sx,sy)
 }
