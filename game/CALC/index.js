@@ -53,7 +53,7 @@ onmouseup = function (){
     
 }
 
-class bullet{
+class Bullet{
     constructor(){
         this.x = sx
         this.y = sy
