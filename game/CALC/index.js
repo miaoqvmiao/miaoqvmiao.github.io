@@ -45,5 +45,5 @@ function move(){
     if (mouseX < 10){
         sx = 10
     }
-    image(SPlane,sx,sy,SPlane.width*3,SPlane.height*3)
+    image(SPlane,sx,sy,SPlane.width*2,SPlane.height*2)
 }
