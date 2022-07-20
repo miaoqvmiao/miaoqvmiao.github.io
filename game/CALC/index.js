@@ -22,7 +22,7 @@ function setup(){
     sy = width - 100
     h = height
     SPlane = loadImage('./res/plane.png')
-    place = loadImage('./res/place.jpg')
+    place = loadImage('./res/bg.png')
 }
 
 function draw(){
