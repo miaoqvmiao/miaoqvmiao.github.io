@@ -21,7 +21,7 @@ function setup(){
     sx = height /2
     sy = width - 100
     h = height
-    SPlane = loadImage('./res/plane.png')
+    SPlane = loadImage('./res/youplane.png')
     place = loadImage('./res/bg.png')
 }
 
