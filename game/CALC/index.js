@@ -15,7 +15,7 @@ function setup(){
     if (navigator.userAgent.indexOf('Android') == -1 && navigator.userAgent.indexOf('iPhone') == -1){
       createCanvas(640,640)
     }else{
-      createCanvas(wt,wt)
+      createCanvas(wt-10,wt-10)
     }
     background
     sx = height /2
@@ -27,7 +27,7 @@ function setup(){
 
 function draw(){
     background(0)
-    image(place,0,0,place.width*((h+400)/place.height),h+400)
+    image(place,0,0,place.width*((h+450)/place.height),h+450)
     move()
 }
 
