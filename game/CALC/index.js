@@ -9,7 +9,8 @@ var wt = window.innerWidth || document.documentElement.clientWidth || document.b
     sx,
     sy,
     h,
-    place
+    place,
+    bullet
 
 function setup(){
     if (navigator.userAgent.indexOf('Android') == -1 && navigator.userAgent.indexOf('iPhone') == -1){
@@ -17,10 +18,10 @@ function setup(){
     }else{
       createCanvas(wt-10,wt-10)
     }
-    background
     sx = height /2
-    sy = width - 100
+    sy = width - 200
     h = height
+    bullet = loadImage('./res/bullet.png')
     SPlane = loadImage('./res/youplane.png')
     place = loadImage('./res/bg.png')
 }
@@ -39,8 +40,8 @@ function randQ(){
 
 function move(){
     sx = mouseX
-    if (mouseX > (h - 30)){
-        sx = h - 30
+    if (mouseX > (h - 40)){
+        sx = h - 40
     }
     if (mouseX < 10){
         sx = 10
@@ -50,4 +51,20 @@ function move(){
 
 onmouseup = function (){
     
+}
+
+class bullet{
+    constructor(){
+        this.x = sx
+        this.y = sy
+        this.speed = 3
+    }
+    
+    show(x,y,w,h){
+        image(bullet,x,y,w,h)
+    }
+    
+    move(){
+        this.y -= this.speed
+    }
 }
