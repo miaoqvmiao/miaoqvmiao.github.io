@@ -27,7 +27,7 @@ function setup(){
 
 function draw(){
     background(0)
-    image(place,0,0,place.width*((h+480)/place.height),h+480)
+    image(place,0,0)
     move()
 }
 
@@ -45,7 +45,7 @@ function move(){
     if (mouseX < 10){
         sx = 10
     }
-    image(SPlane,sx,sy,SPlane.width*1.5,SPlane.height*1.5)
+    image(SPlane,sx,sy,SPlane.width/10,SPlane.height/10)
 }
 
 onmouseup = function (){
