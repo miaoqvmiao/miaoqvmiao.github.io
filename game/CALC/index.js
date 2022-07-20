@@ -27,7 +27,7 @@ function setup(){
 
 function draw(){
     background(0)
-    image(place,0,0,place.width*((h+450)/place.height),h+450)
+    image(place,0,0,place.width*((h+480)/place.height),h+480)
     move()
 }
 
@@ -45,5 +45,5 @@ function move(){
     if (mouseX < 10){
         sx = 10
     }
-    image(SPlane,sx,sy)
+    image(SPlane,sx,sy,Splane.width*3,SPlane.height*3)
 }
