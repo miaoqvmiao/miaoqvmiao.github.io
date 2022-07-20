@@ -47,3 +47,7 @@ function move(){
     }
     image(SPlane,sx,sy,SPlane.width*1.5,SPlane.height*1.5)
 }
+
+onmouseup = function (){
+    
+}
