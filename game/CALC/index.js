@@ -52,7 +52,7 @@ function move(){
 
 function keyup(event){
     var k = window.event ? event.keyCode : event.which
-    if (k == 32){
+    if (k == 70){
         console.log('Fire!')
     }
 }
