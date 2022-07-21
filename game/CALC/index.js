@@ -24,13 +24,13 @@ function setup(){
     bullet = loadImage('./res/bullet.png')
     SPlane = loadImage('./res/youplane.png')
     place = loadImage('./res/bg.png')
+    document.addEventListener("keyup",function (){keyup(window.event)})
 }
 
 function draw(){
     background(0)
     image(place,0,0)
     move()
-    document.addEventListener("keyup",function (){keyup(window.event)})
 }
 
 function randQ(){
