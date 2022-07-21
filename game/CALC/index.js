@@ -19,7 +19,10 @@ var w = window.innerWidth
     bullet,
     bullets = [],
     que,
-    ques = []
+    ques = [],
+    game = 1,
+    TrueAnswerTime = Math.ceil(Math.random() * 5),
+    score = 0
 
 function setup(){
     createCanvas(wt,wt)
@@ -31,9 +34,23 @@ function setup(){
     place = loadImage('./res/bg.png')
     que = loadImage('./res/question.png')
     document.addEventListener("keyup",function (){keyup(window.event)})
+    questions()
 }
 
 function draw(){
+    if (game == 1){
+        randQ()
+        game = 2
+        setTimeout(function (){
+            let q = new question(answer)
+            ques.push(q)
+        },TrueAnswerTime)
+    }else if (game == 2){
+        
+    }else if (game == 3){
+        score ++
+        game = 1
+    }
     background(0)
     image(place,0,0)
     for (let i of bullets){
@@ -92,12 +109,13 @@ class Bullet{
     }
 }
 
-function hits(b,q){
+function hit(b,q){
     return collideRectRect(b.x,b.y,15,30,q.x,q.y,q.w,q.h)
 }
 
 class question{
-    constructor(){
+    constructor(nr){
+        this.nr = nr
         this.y = 0
         this.w = 70
         this.h = 70
@@ -107,5 +125,24 @@ class question{
         
     move(){
         this.y += speed
+    }
+}
+
+async function questions(){
+    while (1){
+        var r = Math.random() * 101
+        setTimeout(function (){
+            let p = new Promise(function (){
+            let q = new question(
+                Math.abs(
+                    Math.ceil(
+                        r == answer ? r - 1 : r
+                    ) - 1
+                )
+            )
+            ques.push(q)
+            })
+            await p
+        },Math.ceil(random(1,3)) - 1)
     }
 }
