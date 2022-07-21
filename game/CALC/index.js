@@ -128,16 +128,18 @@ class question{
 
 async function questions(){
     while (1){
-        var r = Math.random() * 101
         setTimeout(function (){
-            let q = new question(
-                Math.abs(
-                    Math.ceil(
-                        r == answer ? r - 1 : r
-                    ) - 1
+            var r = Math.random() * 101
+            setTimeout(function (){
+                let q = new question(
+                   Math.abs(
+                       Math.ceil(
+                           r == answer ? r - 1 : r
+                       ) - 1
+                   )
                 )
-            )
-            ques.push(q)
-        },Math.ceil(random(1,3)) * 1000 - 1000)
+                ques.push(q)
+            },Math.ceil(random(1,3)) * 1000 - 1000)
+        },1500)
     }
 }
