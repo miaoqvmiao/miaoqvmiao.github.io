@@ -33,14 +33,14 @@ function setup(){
 function draw(){
     background(0)
     image(place,0,0)
-    move()
     for (let i of bullets){
         i.move()
-        i.show(i.x,i.y,i.width/15,i.height/15)
-        if (i.y < 0){
+        image(bullet,i.x,i.y,i.width/15,i.height/15)
+        if (i.y < i.height/15){
             bullets.splice(bullets.indexOf(i),1)
         }
     }
+    move()
 }
 
 function randQ(){
@@ -75,10 +75,6 @@ class Bullet{
         this.y = sy
         this.speed = 3
         bullets.push(this)
-    }
-    
-    show(x,y,w,h){
-        image(bullet,x,y,w,h)
     }
     
     move(){
