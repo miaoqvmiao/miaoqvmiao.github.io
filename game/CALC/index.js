@@ -35,7 +35,7 @@ function draw(){
     image(place,0,0)
     for (let i of bullets){
         i.move()
-        image(bullet,i.x,i.y,i.width/15,i.height/15)
+        image(bullet,i.x,i.y,i.15,30)
         if (i.y < i.height/15){
             bullets.splice(bullets.indexOf(i),1)
         }
@@ -57,7 +57,7 @@ function move(){
     if (mouseX < 10){
         sx = 10
     }
-    image(SPlane,sx,sy,SPlane.width/9.5,SPlane.height/9.5)
+    image(SPlane,sx,sy,SPlane.width/7,SPlane.height/7)
 }
 
 function keyup(event){
