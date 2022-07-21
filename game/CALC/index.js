@@ -35,7 +35,7 @@ function draw(){
     image(place,0,0)
     for (let i of bullets){
         i.move()
-        image(bullet,i.x,i.y,i.15,30)
+        image(bullet,i.x,i.y,15,30)
         if (i.y < i.height/15){
             bullets.splice(bullets.indexOf(i),1)
         }
