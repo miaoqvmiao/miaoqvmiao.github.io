@@ -17,7 +17,8 @@ var w = window.innerWidth
     h,
     place,
     bullet,
-    bullets = []
+    bullets = [],
+    que
 
 function setup(){
     createCanvas(wt,wt)
@@ -79,5 +80,18 @@ class Bullet{
     
     move(){
         this.y -= this.speed
+    }
+}
+
+function hits(b,q){
+    return collideRectRect(b.x,b.y,15,30,q.x,q.y,q.w,q.h)
+}
+
+class question{
+    constructor(){
+        this.x = Math.ceil(Math.random() * wt)
+        this.y = 0
+        this.w = 0
+        this.h = 0
     }
 }
