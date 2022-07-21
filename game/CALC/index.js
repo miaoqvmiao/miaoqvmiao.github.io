@@ -1,6 +1,6 @@
-var wt = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth,
+var wt = screen.availWidth < screen.availHeight ? screen.availWidth : screen.availHeight,
     answer,
-    q1,
+    q1, 
     q2,
     max = 100,
     min = -100,
@@ -14,11 +14,7 @@ var wt = window.innerWidth || document.documentElement.clientWidth || document.b
     bullets = []
 
 function setup(){
-    if (navigator.userAgent.indexOf('Android') == -1 && navigator.userAgent.indexOf('iPhone') == -1){
-      createCanvas(640,640)
-    }else{
-      createCanvas(wt-10,wt-10)
-    }
+    createCanvas(wt,wt)
     sx = height /2
     sy = width - 150
     h = height
@@ -34,9 +30,9 @@ function draw(){
     move()
     for (let i of bullets){
         i.move()
-        i.show(i.x,i.y,i.width/2,i.height/2)
+        i.show(i.x,i.y,i.width/15,i.height/15)
         if (i.y < 0){
-            bullets[bullets.indexOf(i)] = null
+            bullets.splice(bullets.indexOf(i),1)
         }
     }
 }
@@ -55,7 +51,7 @@ function move(){
     if (mouseX < 10){
         sx = 10
     }
-    image(SPlane,sx,sy,SPlane.width/10,SPlane.height/10)
+    image(SPlane,sx,sy,SPlane.width/9.5,SPlane.height/9.5)
 }
 
 function keyup(event){
