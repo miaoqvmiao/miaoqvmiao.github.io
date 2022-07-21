@@ -44,9 +44,7 @@ function draw(){
         setTimeout(function (){
             let q = new question(answer)
             ques.push(q)
-        },TrueAnswerTime)
-    }else if (game == 2){
-        
+        },TrueAnswerTime * 1000)
     }else if (game == 3){
         score ++
         game = 1
@@ -132,7 +130,6 @@ async function questions(){
     while (1){
         var r = Math.random() * 101
         setTimeout(function (){
-            let p = new Promise(function (){
             let q = new question(
                 Math.abs(
                     Math.ceil(
@@ -142,7 +139,6 @@ async function questions(){
             )
             ques.push(q)
             })
-            await p
-        },Math.ceil(random(1,3)) - 1)
+        },(Math.ceil(random(1,3)) - 1) * 1000)
     }
 }
