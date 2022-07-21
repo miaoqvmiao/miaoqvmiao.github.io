@@ -139,6 +139,6 @@ async function questions(){
             )
             ques.push(q)
             })
-        },(Math.ceil(random(1,3)) - 1) * 1000) 
+        },Math.ceil(random(1,3)) * 1000 - 1000)
     }
 }
