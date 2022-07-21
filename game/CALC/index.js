@@ -49,6 +49,7 @@ function draw(){
         if (i.y > h){
             ques.splice(bullets.indexOf(i),1)
         }
+    }
     move()
 }
 
