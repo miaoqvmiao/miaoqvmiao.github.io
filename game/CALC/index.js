@@ -19,7 +19,7 @@ function setup(){
       createCanvas(wt-10,wt-10)
     }
     sx = height /2
-    sy = width - 200
+    sy = width - 150
     h = height
     bullet = loadImage('./res/bullet.png')
     SPlane = loadImage('./res/youplane.png')
@@ -30,6 +30,7 @@ function draw(){
     background(0)
     image(place,0,0)
     move()
+    document.addEventListener("keyup",function (){keyup(window.event)})
 }
 
 function randQ(){
@@ -49,13 +50,15 @@ function move(){
     image(SPlane,sx,sy,SPlane.width/10,SPlane.height/10)
 }
 
-onmouseup = function (){
-    
+function keyup(event){
+    var k = window.event ? event.keyCode : event.which
+    if (k == 32){
+        console.log('Fire!')
+    }
 }
 
 class Bullet{
     constructor(){
-        this.x = sx
         this.y = sy
         this.speed = 3
     }
