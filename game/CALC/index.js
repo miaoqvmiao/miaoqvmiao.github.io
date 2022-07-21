@@ -18,7 +18,8 @@ var w = window.innerWidth
     place,
     bullet,
     bullets = [],
-    que
+    que,
+    ques = []
 
 function setup(){
     createCanvas(wt,wt)
@@ -28,6 +29,7 @@ function setup(){
     bullet = loadImage('./res/bullet.png')
     SPlane = loadImage('./res/youplane.png')
     place = loadImage('./res/bg.png')
+    que = loadImage('./res/question.png')
     document.addEventListener("keyup",function (){keyup(window.event)})
 }
 
@@ -37,10 +39,16 @@ function draw(){
     for (let i of bullets){
         i.move()
         image(bullet,i.x,i.y,15,30)
-        if (i.y < i.height/15){
+        if (i.y < 0){
             bullets.splice(bullets.indexOf(i),1)
         }
     }
+    for (let i of ques){
+        i.move()
+        image(que,i.x,i.y,i.w,i.h)
+        if (i.y > h){
+            ques.splice(bullets.indexOf(i),1)
+        }
     move()
 }
 
@@ -89,9 +97,14 @@ function hits(b,q){
 
 class question{
     constructor(){
-        this.x = Math.ceil(Math.random() * wt)
         this.y = 0
-        this.w = 0
-        this.h = 0
+        this.w = 70
+        this.h = 70
+        this.x = Math.ceil(Math.random() * wt) - this.w /2
+        ques.push(this)
+    }
+        
+    move(){
+        this.y += speed
     }
 }
