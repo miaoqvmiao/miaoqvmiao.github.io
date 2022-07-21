@@ -1,4 +1,10 @@
-var wt = screen.availWidth < screen.availHeight ? screen.availWidth : screen.availHeight,
+var w = window.innerWidth
+        || document.documentElement.clientWidth
+        || document.body.clientWidth,
+    h = window.innerHeight
+        || document.documentElement.clientHeight
+        || document.body.clientHeight,
+    wt = w < h ? w : h,
     answer,
     q1, 
     q2,
