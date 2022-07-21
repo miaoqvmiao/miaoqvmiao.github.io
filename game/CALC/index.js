@@ -10,7 +10,8 @@ var wt = window.innerWidth || document.documentElement.clientWidth || document.b
     sy,
     h,
     place,
-    bullet
+    bullet,
+    bullets = []
 
 function setup(){
     if (navigator.userAgent.indexOf('Android') == -1 && navigator.userAgent.indexOf('iPhone') == -1){
@@ -31,6 +32,13 @@ function draw(){
     background(0)
     image(place,0,0)
     move()
+    for (let i of bullets){
+        i.move()
+        i.show(i.x,i.y,i.width/2,i.height/2)
+        if (i.y < 0){
+            bullets[bullets.indexOf(i)] = null
+        }
+    }
 }
 
 function randQ(){
@@ -59,8 +67,10 @@ function keyup(event){
 
 class Bullet{
     constructor(){
+        this.x = sx
         this.y = sy
         this.speed = 3
+        bullets.push(this)
     }
     
     show(x,y,w,h){
