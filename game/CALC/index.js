@@ -62,6 +62,8 @@ function keyup(event){
     var k = window.event ? event.keyCode : event.which
     if (k == 70){
         console.log('Fire!')
+        var b = new Bullet()
+        bullets.push(b)
     }
 }
 
