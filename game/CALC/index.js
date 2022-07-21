@@ -71,7 +71,7 @@ function keyup(event){
 
 class Bullet{
     constructor(){
-        this.x = sx - bullet.width / 2
+        this.x = sx + bullet.width / 2
         this.y = sy
         this.speed = 3
         bullets.push(this)
