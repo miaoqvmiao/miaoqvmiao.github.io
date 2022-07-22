@@ -34,6 +34,7 @@ function setup(){
     place = loadImage('./res/bg.png')
     que = loadImage('./res/question.png')
     document.addEventListener("keyup",function (){keyup(window.event)})
+    setTimeout('questions()',500)
 }
 
 function draw(){
@@ -43,7 +44,7 @@ function draw(){
         randQ()
         game = 2
         setTimeout(function (){
-            let q = new question(answer.toString())
+            let q = new question(answer)
             ques.push(q)
         },TrueAnswerTime * 1000)
     }else if (game == 3){
@@ -133,24 +134,22 @@ class question{
         
     show(){
         image(que,this.x,this.y,this.w,this.h)
-        text(this.rn,this.x,this.y,this.w * 2,this.h * 2)
+        text(this.nr,this.x,this.y,this.w * 2,this.h * 2)
     }
 }
 
 function questions(){
     while (isend == 2){
-        setTimeout(function (){
-            var r = Math.random() * 101
-            setTimeout(function (){
-                let q = new question(
-                   Math.abs(
-                       Math.ceil(
-                           r == answer ? r - 1 : r
-                       ) - 1
-                   ).toString()
-                )
-                ques.push(q)
-            },Math.ceil(random(1,3)) * 1000 - 1000)
-        },1500)
+        var r = Math.random() * 101
+        setTimeout(`function ()
+            let q = new question(
+               Math.abs(
+                   Math.ceil(
+                       r == answer ? r - 1 : r
+                   ) - 1
+               )
+            )
+            ques.push(q)
+        }`,Math.ceil(random(1,3)) * 1000 - 1000)
     }
 }
