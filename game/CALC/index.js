@@ -131,8 +131,7 @@ class question{
         
     show(){
         image(que,this.x,this.y,this.w,this.h)
-        textAlign(CENTER,CENTER)
-        text(this.rn,this.x,this.y,this.w,this.h)
+        text(this.rn,this.x,this.y,this.w * 2,this.h * 2)
     }
 }
 
