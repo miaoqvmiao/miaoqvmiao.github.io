@@ -139,7 +139,7 @@ class question{
 }
 
 function questions(){
-    while (isend == 2){
+    while (game == 2){
         var r = Math.random() * 101
         setTimeout(`function ()
             let q = new question(
