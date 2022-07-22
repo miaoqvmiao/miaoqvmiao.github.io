@@ -8,8 +8,8 @@ var w = window.innerWidth
     answer,
     q1, 
     q2,
-    max = 100,
-    min = -100,
+    maxt = 100,
+    mint = -100,
     speed = 2,
     SPlane,
     sx,
@@ -73,8 +73,8 @@ function draw(){
 }
 
 function randQ(){
-    q1 = Math.ceil(Math.random()*(max-min+1)+min) - 1
-    q2 = Math.ceil(Math.random()*(q1-min)+min) - 1
+    q1 = Math.ceil(Math.random()*(maxt-mint+1)+mint) - 1
+    q2 = Math.ceil(Math.random()*(q1-mint)+mint) - 1
     answer = q1 + q2
 }
 
