@@ -134,7 +134,7 @@ class question{
         
     show(){
         image(que,this.x,this.y,this.w,this.h)
-        text(this.nr,this.x,this.y,this.w * 2,this.h * 2)
+        text(this.nr,this.x,this.y)
     }
 }
 
