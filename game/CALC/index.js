@@ -113,9 +113,9 @@ function hit(b,q){
 class question{
     constructor(nr){
         this.nr = nr
-        this.y = 0
         this.w = 90
         this.h = 90
+        this.y = this.h - this.h * 2
         this.x = Math.ceil(Math.random() * wt) - this.w /2
         ques.push(this)
     }
