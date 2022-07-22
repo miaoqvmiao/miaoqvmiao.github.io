@@ -24,7 +24,7 @@ var w = window.innerWidth
     TrueAnswerTime = Math.ceil(Math.random() * 5),
     score = 0,
     d = new Date(),
-    lasttime = 0
+    lasttime = d.getTime()
 
 function setup(){
     createCanvas(wt,wt)
@@ -39,11 +39,6 @@ function setup(){
 }
 
 function draw(){
-    var showtime = random(600,1000)
-    if (d.getTime()-lasttime > showtime){
-        ques.push(new question(random(0,199)))
-        lasttime = d.getTime()
-    }
     var i
     var j
     if (game == 1){
@@ -56,6 +51,11 @@ function draw(){
     }else if (game == 3){
         score ++
         game = 1
+    }
+    var showtime = Math.ceil(random(700,3000))
+    if (d.getTime()-lasttime > showtime){
+        ques.push(new question(Math.ceil(random(0,199))))
+        lasttime = d.getTime()
     }
     background(0)
     image(place,0,0)
@@ -140,6 +140,6 @@ class question{
         
     show(){
         image(que,this.x,this.y,this.w,this.h)
-        text(this.nr,this.x,this.y)
+        text(this.nr,this.x - que.width/2,this.y - que.height/2)
     }
 }
