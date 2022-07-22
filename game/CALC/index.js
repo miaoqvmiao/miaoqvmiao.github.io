@@ -59,7 +59,7 @@ function draw(){
     }
     for (let i of ques){
         i.move()
-        image(que,i.x,i.y,i.w,i.h)
+        i.show()
         if (i.y > h){
             ques.splice(bullets.indexOf(i),1)
         }
@@ -114,14 +114,21 @@ class question{
     constructor(nr){
         this.nr = nr
         this.y = 0
-        this.w = 70
-        this.h = 70
+        this.w = 90
+        this.h = 90
         this.x = Math.ceil(Math.random() * wt) - this.w /2
         ques.push(this)
     }
         
     move(){
         this.y += speed
+    }
+        
+    show(){
+        textAlign(CENTER,CENTER)
+        text(this.rn,this.x,this.y,this.w - 10,this.h - 10)
+        image(que,i.x,i.y,i.w,i.h)
+        
     }
 }
 
