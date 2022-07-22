@@ -37,11 +37,13 @@ function setup(){
 }
 
 function draw(){
+    var i
+    var j
     if (game == 1){
         randQ()
         game = 2
         setTimeout(function (){
-            let q = new question(answer + ' ')
+            let q = new question(answer.toString())
             ques.push(q)
         },TrueAnswerTime * 1000)
     }else if (game == 3){
@@ -50,20 +52,20 @@ function draw(){
     }
     background(0)
     image(place,0,0)
-    for (let i of bullets){
+    for (i of bullets){
         i.move()
         image(bullet,i.x,i.y,15,30)
         if (i.y < 0){
             bullets.splice(bullets.indexOf(i),1)
         }
     }
-    for (let i of ques){
+    for (i of ques){
         i.move()
         i.show()
         if (i.y > h){
             ques.splice(bullets.indexOf(i),1)
         }
-        for (let j of bullets){
+        for (j of bullets){
             if (hit(i,j)){
                 ques.splice(bullets.indexOf(i),1)
             }
@@ -145,7 +147,7 @@ function questions(){
                        Math.ceil(
                            r == answer ? r - 1 : r
                        ) - 1
-                   ) + ' '
+                   ).toString()
                 )
                 ques.push(q)
             },Math.ceil(random(1,3)) * 1000 - 1000)
