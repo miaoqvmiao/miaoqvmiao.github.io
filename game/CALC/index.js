@@ -41,7 +41,7 @@ function draw(){
         randQ()
         game = 2
         setTimeout(function (){
-            let q = new question(answer)
+            let q = new question(answer + ' ')
             ques.push(q)
         },TrueAnswerTime * 1000)
     }else if (game == 3){
@@ -73,8 +73,8 @@ function draw(){
 }
 
 function randQ(){
-    q1 = Math.ceil(Math.random()*(maxt-0+1)+0) - 1
-    q2 = Math.ceil(Math.random()*(q1-mint)+mint) - 1
+    q1 = Math.ceil(Math.random()*(maxt+1)) - 1
+    q2 = Math.ceil(Math.random()*99+q1) - 1
     answer = q1 + q2
 }
 
@@ -132,7 +132,7 @@ class question{
     show(){
         image(que,this.x,this.y,this.w,this.h)
         textAlign(CENTER,CENTER)
-        text(this.rn + '',this.x,this.y,this.w - 10,this.h - 10)
+        text(this.rn,this.x,this.y,this.w,this.h)
     }
 }
 
@@ -146,7 +146,7 @@ function questions(){
                        Math.ceil(
                            r == answer ? r - 1 : r
                        ) - 1
-                   )
+                   ) + ' '
                 )
                 ques.push(q)
             },Math.ceil(random(1,3)) * 1000 - 1000)
