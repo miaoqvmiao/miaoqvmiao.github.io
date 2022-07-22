@@ -73,8 +73,8 @@ function draw(){
 }
 
 function randQ(){
-    q1 = Math.floor(Math.random()*(max-min+1)+min)
-    q2 = Math.floor(Math.random()*(q1-min)+min)
+    q1 = Math.ceil(Math.random()*(max-min+1)+min) - 1
+    q2 = Math.ceil(Math.random()*(q1-min)+min) - 1
     answer = q1 + q2
 }
 
