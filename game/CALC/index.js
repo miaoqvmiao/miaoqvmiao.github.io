@@ -139,7 +139,7 @@ class question{
         
     show(){
         image(que,this.x,this.y,this.w,this.h)
-        textSize(32)
-        text(this.nr,this.x + que.width/4,this.y + que.height/2)
+        textSize(10)
+        text(this.nr,this.x + que.width/4,this.y + que.height/2 - 10)
     }
 }
