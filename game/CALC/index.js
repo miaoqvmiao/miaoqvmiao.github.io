@@ -63,6 +63,11 @@ function draw(){
         if (i.y > h){
             ques.splice(bullets.indexOf(i),1)
         }
+        for (let j of bullets){
+            if (hit(i,j)){
+                ques.splice(bullets.indexOf(i),1)
+            }
+        }
     }
     move()
 }
