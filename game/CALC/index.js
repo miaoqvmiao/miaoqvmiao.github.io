@@ -34,7 +34,6 @@ function setup(){
     place = loadImage('./res/bg.png')
     que = loadImage('./res/question.png')
     document.addEventListener("keyup",function (){keyup(window.event)})
-    questions()
 }
 
 function draw(){
@@ -126,8 +125,8 @@ class question{
     }
 }
 
-async function questions(){
-    while (1){
+function questions(){
+    while (isend == 2){
         setTimeout(function (){
             var r = Math.random() * 101
             setTimeout(function (){
