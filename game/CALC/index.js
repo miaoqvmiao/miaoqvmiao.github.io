@@ -73,7 +73,7 @@ function draw(){
 }
 
 function randQ(){
-    q1 = Math.ceil(Math.random()*(maxt-mint+1)+mint) - 1
+    q1 = Math.ceil(Math.random()*(maxt-0+1)+0) - 1
     q2 = Math.ceil(Math.random()*(q1-mint)+mint) - 1
     answer = q1 + q2
 }
@@ -132,7 +132,7 @@ class question{
     show(){
         image(que,this.x,this.y,this.w,this.h)
         textAlign(CENTER,CENTER)
-        text(String(this.rn),this.x,this.y,this.w - 10,this.h - 10)
+        text(this.rn + '',this.x,this.y,this.w - 10,this.h - 10)
     }
 }
 
