@@ -140,6 +140,7 @@ class question{
         
     show(){
         image(que,this.x,this.y,this.w,this.h)
+        textAlign(CENTER,CENTER)
         textSize(10)
         text(this.nr,this.x + que.width/4,this.y + que.height/2 - 10)
     }
