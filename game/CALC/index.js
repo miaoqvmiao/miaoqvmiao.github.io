@@ -34,7 +34,6 @@ function setup(){
     place = loadImage('./res/bg.png')
     que = loadImage('./res/question.png')
     document.addEventListener("keyup",function (){keyup(window.event)})
-    setTimeout('questions()',500)
 }
 
 function draw(){
