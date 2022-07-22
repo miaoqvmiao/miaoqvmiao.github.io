@@ -51,7 +51,7 @@ function draw(){
         score ++
         game = 1
     }
-    var showtime = Math.ceil(random(0.7,3))
+    var showtime = Math.ceil(random(0.09,0.3))
     if (second()-lasttime > showtime){
         ques.push(new question(Math.ceil(random(0,199))))
         lasttime = second()
