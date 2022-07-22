@@ -23,7 +23,8 @@ var w = window.innerWidth
     game = 1,
     TrueAnswerTime = Math.ceil(Math.random() * 5),
     score = 0,
-    lasttime = second()
+    d = new Date()
+    lasttime = d.getTime()
 
 function setup(){
     createCanvas(wt,wt)
@@ -44,17 +45,16 @@ function draw(){
         randQ()
         game = 2
         setTimeout(function (){
-            let q = new question(answer)
-            ques.push(q)
+            ques.push(new question(answer))
         },TrueAnswerTime * 1000)
     }else if (game == 3){
         score ++
         game = 1
     }
-    var showtime = Math.ceil(random(0.09,0.3))
-    if (second()-lasttime > showtime){
+    var showtime = random(90,300)
+    if (d.getTime()-lasttime > showtime){
         ques.push(new question(Math.ceil(random(0,199))))
-        lasttime = second()
+        lasttime = d.getTime()
     }
     background(0)
     image(place,0,0)
