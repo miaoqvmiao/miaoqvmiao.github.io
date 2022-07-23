@@ -73,7 +73,7 @@ function draw(){
             ques.splice(bullets.indexOf(i),1)
         }
         for (j of bullets){
-            if (hit(i,j)){
+            if (collideRectRect(i.x,i.y,15,30,j.x,j.y,j.w,j.h)){
                 ques.splice(bullets.indexOf(i),1)
             }
         }
@@ -118,10 +118,6 @@ class Bullet{
     move(){
         this.y -= this.speed
     }
-}
-
-function hit(b,q){
-    return collideRectRect(b.x,b.y,15,30,q.x,q.y,q.w,q.h)
 }
 
 class question{
