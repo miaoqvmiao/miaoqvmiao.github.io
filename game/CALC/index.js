@@ -54,7 +54,8 @@ function draw(){
     }
     showtime = random(90,300)
     if (d.getTime()-lasttime > showtime){
-        ques.push(new question(Math.ceil(random(0,199))))
+        let q = new question(Math.ceil(random(0,199)))
+        ques.push(q)
         lasttime = d.getTime()
     }
     background(0)
