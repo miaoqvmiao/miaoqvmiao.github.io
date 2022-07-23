@@ -71,11 +71,12 @@ function draw(){
         i.move()
         i.show()
         if (i.y > h){
-            ques.splice(bullets.indexOf(i),1)
+            ques.splice(ques.indexOf(i),1)
         }
         for (j of bullets){
             if (collideRectRect(j.x,j.y,15,30,i.x,i.y,i.w,i.h)){
-                ques.splice(bullets.indexOf(i),1)
+                ques.splice(ques.indexOf(i),1)
+                bullets.splice(bullets.indexOf(j),1)
             }
         }
     }
