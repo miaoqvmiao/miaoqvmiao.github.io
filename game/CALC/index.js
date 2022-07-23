@@ -73,7 +73,7 @@ function draw(){
             ques.splice(bullets.indexOf(i),1)
         }
         for (j of bullets){
-            if (collideRectRect(i.x,i.y,15,30,j.x,j.y,j.w,j.h)){
+            if (collideRectRect(j.x,j.y,15,30,i.x,i.y,i.w,i.h)){
                 ques.splice(bullets.indexOf(i),1)
             }
         }
