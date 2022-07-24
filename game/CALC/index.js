@@ -48,15 +48,16 @@ function draw(){
         setTimeout(function (){
             ques.push(new question(answer))
         },TrueAnswerTime * 1000)
+    }else if (game == 2){
+        showtime = random(90,300)
+        if (d.getTime()-lasttime > showtime){
+            let q = new question(Math.ceil(random(0,199)))
+            ques.push(q)
+            lasttime = d.getTime()
+        }
     }else if (game == 3){
         score ++
         game = 1
-    }
-    showtime = random(90,300)
-    if (d.getTime()-lasttime > showtime){
-        let q = new question(Math.ceil(random(0,199)))
-        ques.push(q)
-        lasttime = d.getTime()
     }
     background(0)
     image(place,0,0)
