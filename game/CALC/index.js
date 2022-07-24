@@ -25,7 +25,8 @@ var w = window.innerWidth
     score = 0,
     d = new Date(),
     lasttime = d.getTime(),
-    showtime
+    showtime,
+    now
 
 function setup(){
     createCanvas(wt,wt)
@@ -49,11 +50,12 @@ function draw(){
             ques.push(new question(answer))
         },TrueAnswerTime * 1000)
     }else if (game == 2){
+        now = d.getTime()
         showtime = random(90,300)
-        if (d.getTime()-lasttime > showtime){
+        if (now-lasttime > showtime){
             let q = new question(Math.ceil(random(0,199)))
             ques.push(q)
-            lasttime = d.getTime()
+            lasttime = now
         }
     }else if (game == 3){
         score ++
