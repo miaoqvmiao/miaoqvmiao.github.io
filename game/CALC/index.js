@@ -26,7 +26,7 @@ var w = window.innerWidth
     d = new Date(),
     lasttime = d.getTime(),
     showtime,
-    now
+    now = d.getTime()
 
 function setup(){
     createCanvas(wt,wt)
