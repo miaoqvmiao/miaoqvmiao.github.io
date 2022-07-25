@@ -154,8 +154,8 @@ function qtext(){
     textAlign(CENTER,CENTER)
     textSize(45)
     if (q2 <= 0){
-        text(q1 + " - " + q2 + ' ',45,wt - 45)
+        text(q1 + " - " + q2 + ' ',47*2,wt - 45)
     }else{
-        text(q1 + "+" + q2 + " ",45,wt - 45)
+        text(q1 + "+" + q2 + " ",47*2,wt - 45)
     }
 }
