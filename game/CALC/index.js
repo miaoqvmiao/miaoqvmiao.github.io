@@ -90,8 +90,8 @@ function draw(){
 }
 
 function randQ(){
-    q1 = Math.ceil(Math.random()*(maxt+1)) - 1
-    q2 = Math.ceil(Math.random()*99+q1) - 1
+    q1 = Math.floor(Math.random()*(maxt+1))
+    q2 = Math.floor(Math.random()*(q1+mint+1)+mint)
     answer = q1 + q2
 }
 
@@ -151,6 +151,7 @@ class question{
 }
 
 function qtext(){
+    fill(255)
     textAlign(CENTER,CENTER)
     textSize(45)
     if (q2 <= 0){
