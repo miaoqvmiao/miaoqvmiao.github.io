@@ -51,7 +51,7 @@ function draw(){
         },TrueAnswerTime * 1000)
     }else if (game == 2){
         d = new Date()
-        showtime = random(90,300)
+        showtime = random(800,3000)
         if (now-lasttime > showtime){
             let q = new question(Math.ceil(random(0,199)))
             ques.push(q)
