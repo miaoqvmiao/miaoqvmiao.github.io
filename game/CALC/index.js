@@ -91,7 +91,7 @@ function draw(){
 
 function randQ(){
     q1 = Math.floor(Math.random()*(maxt+1))
-    q2 = Math.floor(Math.random()+mint)
+    q2 = Math.floor(Math.random()-q1)
     answer = q1 + q2
 }
 
