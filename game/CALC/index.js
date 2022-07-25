@@ -159,5 +159,5 @@ function qtext(){
         text(q1 + " - " + Math.abs(q2) + ' ',47*2,wt - 45)
     }else{
         text(q1 + "+" + q2 + " ",47*2,wt - 45)
-    }
+    } 
 }
