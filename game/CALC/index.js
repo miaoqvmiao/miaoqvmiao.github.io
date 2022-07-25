@@ -91,7 +91,7 @@ function draw(){
 
 function randQ(){
     q1 = Math.floor(Math.random()*(maxt+1))
-    q2 = Math.floor(Math.random()*(q1+mint+1)+mint)
+    q2 = Math.floor(Math.random()+mint)
     answer = q1 + q2
 }
 
@@ -146,7 +146,7 @@ class question{
         image(que,this.x,this.y,this.w,this.h)
         fill(0)
         textAlign(CENTER,CENTER)
-        textSize(25)
+        textSize(23)
         text(this.nr,this.x + this.w/2+9,this.y + this.h/2+9)
     }
 }
@@ -156,8 +156,8 @@ function qtext(){
     textAlign(CENTER,CENTER)
     textSize(45)
     if (q2 <= 0){
-        text(q1 + " - " + Math.abs(q2) + ' ',47*2,wt - 45)
+        text(q1 + " - " + Math.abs(q2) + ' ',48*2,wt - 45)
     }else{
-        text(q1 + "+" + q2 + " ",47*2,wt - 45)
+        text(q1 + "+" + q2 + " ",48*2,wt - 45)
     } 
 }
