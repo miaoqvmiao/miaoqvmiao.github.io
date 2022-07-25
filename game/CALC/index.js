@@ -27,7 +27,8 @@ var w = window.innerWidth
     lasttime = d.getTime(),
     showtime,
     now = d.getTime(),
-    taid
+    taid,
+    score = 0
 
 function setup(){
     createCanvas(wt,wt)
@@ -63,6 +64,7 @@ function draw(){
         }
     }else if (game == 3){
         score ++
+        setTimeout('console.log("Right!!!")',1000)
         game = 1
     }
     background(0)
@@ -83,7 +85,11 @@ function draw(){
         for (j of bullets){
             if (collideRectRect(j.x,j.y,15,30,i.x,i.y,i.w,i.h)){
                 if (ques[taid] == i){
-                    game = 1
+                    speed += 0.1
+                    game = 3
+                }else{
+                    score--
+                    speed += 0.2
                 }
                 ques.splice(ques.indexOf(i),1)
                 bullets.splice(bullets.indexOf(j),1)
