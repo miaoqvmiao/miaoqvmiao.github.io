@@ -26,7 +26,8 @@ var w = window.innerWidth
     d = new Date(),
     lasttime = d.getTime(),
     showtime,
-    now = d.getTime()
+    now = d.getTime(),
+    taid
 
 function setup(){
     createCanvas(wt,wt)
@@ -48,6 +49,7 @@ function draw(){
         game = 2
         setTimeout(function (){
             ques.push(new question(answer))
+            taid = ques.length - 1
         },TrueAnswerTime * 1000)
     }else if (game == 2){
         d = new Date()
@@ -80,6 +82,9 @@ function draw(){
         }
         for (j of bullets){
             if (collideRectRect(j.x,j.y,15,30,i.x,i.y,i.w,i.h)){
+                if (ques[taid] == i){
+                    game = 1
+                }
                 ques.splice(ques.indexOf(i),1)
                 bullets.splice(bullets.indexOf(j),1)
             }
