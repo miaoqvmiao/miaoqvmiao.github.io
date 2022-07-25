@@ -27,8 +27,7 @@ var w = window.innerWidth
     lasttime = d.getTime(),
     showtime,
     now = d.getTime(),
-    taid,
-    score = 0
+    taid
 
 function setup(){
     createCanvas(wt,wt)
