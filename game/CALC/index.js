@@ -51,12 +51,14 @@ function draw(){
         },TrueAnswerTime * 1000)
     }else if (game == 2){
         d = new Date()
-        showtime = random(800,3000)
+        showtime = random(800,2000)
         if (now-lasttime > showtime){
             let q = new question(Math.ceil(random(0,199)))
             ques.push(q)
             lasttime = now
-        }else{now = d.getTime()}
+        }else{
+            now = d.getTime()
+        }
     }else if (game == 3){
         score ++
         game = 1
@@ -84,6 +86,7 @@ function draw(){
         }
     }
     move()
+    qtext()
 }
 
 function randQ(){
@@ -142,7 +145,17 @@ class question{
     show(){
         image(que,this.x,this.y,this.w,this.h)
         textAlign(CENTER,CENTER)
-        textSize(20)
-        text(this.nr,this.x,this.y)
+        textSize(25)
+        text(this.nr,this.x + this.w,this.y + this.h)
+    }
+}
+
+function qtext(){
+    textAlign(CENTER,CENTER)
+    textSize(45)
+    if (q2 <= 0){
+        text(q1 + " - " + q2 + ' ',0,wt - 45)
+    }else{
+        text(q1 + "+" + q2 + " ",0,wt - 45)
     }
 }
