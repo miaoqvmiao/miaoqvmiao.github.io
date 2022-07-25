@@ -146,7 +146,7 @@ class question{
         image(que,this.x,this.y,this.w,this.h)
         textAlign(CENTER,CENTER)
         textSize(25)
-        text(this.nr,this.x + this.w,this.y + this.h)
+        text(this.nr,this.x + this.w/2,this.y + this.h/2)
     }
 }
 
