@@ -10,7 +10,7 @@ var w = window.innerWidth
     q2,
     maxt = 100,
     mint = -100,
-    speed = 2,
+    speed = 0.5,
     SPlane,
     sx,
     sy,
