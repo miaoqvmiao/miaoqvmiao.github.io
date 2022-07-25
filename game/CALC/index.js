@@ -50,13 +50,12 @@ function draw(){
             ques.push(new question(answer))
         },TrueAnswerTime * 1000)
     }else if (game == 2){
-        now = d.getTime()
         showtime = random(90,300)
         if (now-lasttime > showtime){
             let q = new question(Math.ceil(random(0,199)))
             ques.push(q)
             lasttime = now
-        }
+        }else{now = d.getTime()}
     }else if (game == 3){
         score ++
         game = 1
