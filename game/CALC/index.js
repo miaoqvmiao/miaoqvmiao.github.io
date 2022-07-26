@@ -47,7 +47,7 @@ function draw(){
     if (game == 1){
         randQ()
         game = 2
-        setTimeout(function (){
+        setTimeout(()=>{
             ques.push(new question(answer))
             taid = ques.length - 1
         },TrueAnswerTime * 1000)
@@ -74,6 +74,7 @@ function draw(){
             bullets.splice(bullets.indexOf(i),1)
         }
     }
+    text(game)
     for (i of ques){
         i.move()
         i.show()
