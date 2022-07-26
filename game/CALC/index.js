@@ -74,7 +74,7 @@ function draw(){
             bullets.splice(bullets.indexOf(i),1)
         }
     }
-    text(game)
+    text(game,wt/2,wt/2)
     for (i of ques){
         i.move()
         i.show()
