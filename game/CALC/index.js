@@ -83,7 +83,7 @@ function draw(){
         }
         for (j of bullets){
             if (collideRectRect(j.x,j.y,15,30,i.x,i.y,i.w,i.h)){
-                if (ques['taid'] === i){
+                if (ques[taid] === i){
                     speed += 0.0009
                     game = 3
                 }else{
