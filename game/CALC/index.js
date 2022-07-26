@@ -63,7 +63,8 @@ function draw(){
         }
     }else if (game == 3){
         score ++
-        setTimeout(()=>{game = 1},9000)
+        game = 1
+        ques = []
     }
     background(0)
     image(place,0,0)
@@ -74,9 +75,6 @@ function draw(){
             bullets.splice(bullets.indexOf(i),1)
         }
     }
-    textSize(40)
-    fill(0)
-    text(game,wt/2,wt/2)
     for (i of ques){
         i.move()
         i.show()
