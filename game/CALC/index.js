@@ -74,6 +74,8 @@ function draw(){
             bullets.splice(bullets.indexOf(i),1)
         }
     }
+    textSize(40)
+    fill(0)
     text(game,wt/2,wt/2)
     for (i of ques){
         i.move()
