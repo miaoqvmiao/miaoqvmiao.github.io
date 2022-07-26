@@ -63,8 +63,7 @@ function draw(){
         }
     }else if (game == 3){
         score ++
-        sleeping(9000)
-        game = 1
+        setTimeout(()=>{game = 1},9000)
     }
     background(0)
     image(place,0,0)
@@ -170,11 +169,4 @@ function qtext(){
     }else{
         text(q1 + "+" + q2 + " ",48*2,wt - 45)
     } 
-}
-
-function sleeping(time){
-    var t = new Date().getTime()+time
-    while(true){
-        if (new Date().getTime() > t){return 0}
-    }
 }
