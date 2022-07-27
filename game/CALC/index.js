@@ -48,8 +48,9 @@ function draw(){
         randQ()
         game = 2
         setTimeout(()=>{
-            ques.push(new question(answer))
-            taid = ques.length - 1
+            var q = new question(answer)
+            ques.push(q)
+            taid = ques.indexOf(q)
         },TrueAnswerTime * 1000)
     }else if (game == 2){
         d = new Date()
