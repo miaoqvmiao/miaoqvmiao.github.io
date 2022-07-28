@@ -84,8 +84,8 @@ function draw(){
         }
         for (j of bullets){
             if (collideRectRect(j.x,j.y,15,30,i.x,i.y,i.w,i.h)){
-                var tf = ques[taid].nr || false
-                if (tf === i.nr){
+                var tf = ques[taid] || false
+                if (tf === i){
                     speed += 0.0009
                     game = 3
                 }else{
