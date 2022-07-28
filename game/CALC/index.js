@@ -42,6 +42,7 @@ function setup(){
 }
 
 function draw(){
+    d = new Date()
     var i
     var j
     if (game == 1){
@@ -53,7 +54,6 @@ function draw(){
             taid = ques.indexOf(q)
         },TrueAnswerTime * 1000)
     }else if (game == 2){
-        d = new Date()
         showtime = random(800,2000)
         if (now-lasttime > showtime){
             let q = new question(Math.ceil(random(0,199)))
@@ -84,7 +84,8 @@ function draw(){
         }
         for (j of bullets){
             if (collideRectRect(j.x,j.y,15,30,i.x,i.y,i.w,i.h)){
-                if (ques[taid].nr === i.nr){
+                var tf = ques[taid].nr || false
+                if (tf === i.nr){
                     speed += 0.0009
                     game = 3
                 }else{
