@@ -84,16 +84,17 @@ function draw(){
         }
         for (j of bullets){
             if (collideRectRect(j.x,j.y,15,30,i.x,i.y,i.w,i.h)){
-                var tf = ques[taid] || false
-                if (tf.nr == i.nr){
+                if (answer == i.nr){
+                    ques.splice(ques.indexOf(i),1)
+                    bullets.splice(bullets.indexOf(j),1)
                     speed += 0.0009
                     game = 3
                 }else{
+                    ques.splice(ques.indexOf(i),1)
+                    bullets.splice(bullets.indexOf(j),1)
                     score--
-                    speed += 0.0015
+                    speed += 0.0019
                 }
-                ques.splice(ques.indexOf(i),1)
-                bullets.splice(bullets.indexOf(j),1)
             }
         }
     }
