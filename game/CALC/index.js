@@ -56,7 +56,11 @@ function draw(){
     }else if (game == 2){
         showtime = random(800,2000)
         if (now-lasttime > showtime){
-            let q = new question(Math.ceil(random(0,199)))
+            var nrr = Math.ceil(random(0,199))
+            if (nrr == answer){
+                nrr++
+            }
+            let q = new question(nrr)
             ques.push(q)
             lasttime = now
         }else{
@@ -65,7 +69,6 @@ function draw(){
     }else if (game == 3){
         score ++
         game = 1
-        ques = []
     }
     background(0)
     image(place,0,0)
@@ -85,7 +88,7 @@ function draw(){
         for (j of bullets){
             if (collideRectRect(j.x,j.y,15,30,i.x,i.y,i.w,i.h)){
                 if (answer == i.nr){
-                    ques.splice(ques.indexOf(i),1)
+                    ques = []
                     bullets.splice(bullets.indexOf(j),1)
                     speed += 0.0009
                     game = 3
