@@ -175,5 +175,6 @@ function qtext(){
         text(q1 + " - " + Math.abs(q2) + ' ',48*2,wt - 45)
     }else{
         text(q1 + "+" + q2 + " ",48*2,wt - 45)
-    } 
+    }
+    text("Score:" + score,48*2,45)
 }
