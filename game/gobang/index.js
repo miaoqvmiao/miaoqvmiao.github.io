@@ -17,7 +17,7 @@ var isBlack = 1,
     winCM = []
 
 function setup(){
-  if (ua.indexOf('Android') == -1){
+  if (ua.indexOf('Android') == -1 || ua.indexOf('iPhone') == -1){
     createCanvas(640,640)
   }else{
     createCanvas(wt,wt)
