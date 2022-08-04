@@ -42,7 +42,6 @@ function setup(){
 }
 
 function draw(){
-    qtext()
     d = new Date()
     var i
     var j
@@ -72,6 +71,7 @@ function draw(){
         game = 1
     }
     background(0)
+    qtext()
     image(place,0,0)
     for (i of bullets){
         i.move()
@@ -174,7 +174,7 @@ function qtext(){
     if (q2 <= 0){
         text(q1 + " - " + Math.abs(q2) + ' ',48*2,wt - 45)
     }else{
-        text(q1 + "+" + q2 + " ",48*2,wt - 45)
+        text(q1 + "+" + q2 + " ",50*2,wt - 45)
     }
-    text("Score:" + score,45,45)
+    text("Score:" + score,wt/2,wt/2)
 }
