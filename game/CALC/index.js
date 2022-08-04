@@ -42,6 +42,7 @@ function setup(){
 }
 
 function draw(){
+    qtext()
     d = new Date()
     var i
     var j
@@ -95,14 +96,13 @@ function draw(){
                 }else{
                     ques.splice(ques.indexOf(i),1)
                     bullets.splice(bullets.indexOf(j),1)
-                    score--
+                    score -= 0.5
                     speed += 0.0019
                 }
             }
         }
     }
     move()
-    qtext()
 }
 
 function randQ(){
@@ -176,5 +176,5 @@ function qtext(){
     }else{
         text(q1 + "+" + q2 + " ",48*2,wt - 45)
     }
-    text("Score:" + score,48*2,45)
+    text("Score:" + score,wt/2,wt/2)
 }
