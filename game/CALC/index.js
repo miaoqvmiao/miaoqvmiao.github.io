@@ -42,7 +42,6 @@ function setup(){
 }
 
 function draw(){
-    d = new Date()
     var i
     var j
     if (game == 1){
@@ -61,10 +60,9 @@ function draw(){
                 nrr++
             }
             let q = new question(nrr)
-            ques.push(q)
             lasttime = now
         }else{
-            now = d.getTime()
+            now = new Date().getTime()
         }
     }else if (game == 3){
         score += 2
@@ -176,5 +174,5 @@ function qtext(){
     }else{
         text(q1 + "+" + q2 + " ",50*2,wt - 45)
     }
-    text("Score:" + score/2,wt/2,wt/2)
+    text("Score:" + score,wt/2,wt/2)
 }
