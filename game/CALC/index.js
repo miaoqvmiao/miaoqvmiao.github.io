@@ -175,3 +175,5 @@ function qtext(){
     }
     text("Score:" + score,wt/2,wt/2)
 }
+
+window.onmouseup = ()==>{}
