@@ -42,6 +42,7 @@ function setup(){
 }
 
 function draw(){
+    speed
     var i
     var j
     if (game == 1){
@@ -88,13 +89,13 @@ function draw(){
                 if (answer == i.nr){
                     ques = []
                     bullets.splice(bullets.indexOf(j),1)
-                    speed += 0.0045
+                    speed += 0.005
                     game = 3
                 }else{
                     ques.splice(ques.indexOf(i),1)
                     bullets.splice(bullets.indexOf(j),1)
                     score -= 1
-                    speed += 0.009
+                    speed += 0.01
                 }
             }
         }
