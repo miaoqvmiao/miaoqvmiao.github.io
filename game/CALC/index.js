@@ -67,7 +67,7 @@ function draw(){
             now = d.getTime()
         }
     }else if (game == 3){
-        score ++
+        score += 2
         game = 1
     }
     background(0)
@@ -96,7 +96,7 @@ function draw(){
                 }else{
                     ques.splice(ques.indexOf(i),1)
                     bullets.splice(bullets.indexOf(j),1)
-                    score -= 0.5
+                    score -= 1
                     speed += 0.0019
                 }
             }
@@ -176,5 +176,5 @@ function qtext(){
     }else{
         text(q1 + "+" + q2 + " ",50*2,wt - 45)
     }
-    text("Score:" + score,wt/2,wt/2)
+    text("Score:" + score/2,wt/2,wt/2)
 }
