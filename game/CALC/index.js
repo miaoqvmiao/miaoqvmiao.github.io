@@ -4,7 +4,7 @@ var w = window.innerWidth
     h = window.innerHeight
         || document.documentElement.clientHeight
         || document.body.clientHeight,
-    wt = w < h ? w : h,
+    wt = w < h ? w-20 : h-20,
     answer,
     q1, 
     q2,
@@ -150,7 +150,7 @@ class question{
         this.w = 90
         this.h = 90
         this.y = this.h - this.h * 2
-        this.x = Math.ceil(Math.random() * wt) - this.w /2
+        this.x = Math.ceil(Math.random() * (wt-20)) - this.w /2
         ques.push(this)
     }
         
