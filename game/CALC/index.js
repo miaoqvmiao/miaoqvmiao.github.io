@@ -89,13 +89,13 @@ function draw(){
                 if (answer == i.nr){
                     ques = []
                     bullets.splice(bullets.indexOf(j),1)
-                    speed += 0.005
+                    speed += 0.025
                     game = 3
                 }else{
                     ques.splice(ques.indexOf(i),1)
                     bullets.splice(bullets.indexOf(j),1)
                     score -= 1
-                    speed += 0.01
+                    speed += 0.05
                 }
             }
         }
