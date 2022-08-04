@@ -176,4 +176,9 @@ function qtext(){
     text("Score:" + score,wt/2,wt/2)
 }
 
-window.onmouseup = ()==>{}
+window.onmouseup = (event)=>{
+    if (ua.indexOf('Android') != -1 || ua.indexOf('iPhone') != -1){
+        console.log('Fire!')
+        var b = new Bullet()
+    }
+}
