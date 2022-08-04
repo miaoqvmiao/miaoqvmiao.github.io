@@ -49,7 +49,6 @@ function draw(){
         game = 2
         setTimeout(()=>{
             var q = new question(answer)
-            ques.push(q)
             taid = ques.indexOf(q)
         },TrueAnswerTime * 1000)
     }else if (game == 2){
@@ -65,7 +64,7 @@ function draw(){
             now = new Date().getTime()
         }
     }else if (game == 3){
-        score += 2
+        score++
         game = 1
     }
     background(0)
@@ -89,13 +88,13 @@ function draw(){
                 if (answer == i.nr){
                     ques = []
                     bullets.splice(bullets.indexOf(j),1)
-                    speed += 0.0009
+                    speed += 0.0045
                     game = 3
                 }else{
                     ques.splice(ques.indexOf(i),1)
                     bullets.splice(bullets.indexOf(j),1)
                     score -= 1
-                    speed += 0.0019
+                    speed += 0.009
                 }
             }
         }
