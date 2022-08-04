@@ -124,7 +124,6 @@ function keyup(event){
     if (k == 70){
         console.log('Fire!')
         var b = new Bullet()
-        bullets.push(b)
     }
 }
 
