@@ -82,6 +82,9 @@ function draw(){
         i.move()
         i.show()
         if (i.y > h){
+            if (i == ques[taid]){
+                score--
+            }
             ques.splice(ques.indexOf(i),1)
         }
         for (j of bullets){
