@@ -69,7 +69,7 @@ function draw(){
         game = 1
     }
     background(0)
-    image(place,0,0)
+    image(place,0,0,wt,wt)
     qtext()
     for (i of bullets){
         i.move()
